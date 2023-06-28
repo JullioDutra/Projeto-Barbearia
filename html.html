@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+
+<!--configurações-->
+
+<head>
+  <style>
+    #conteudo {
+      display: none; /* Esconde o conteúdo inicialmente */
+    }
+  </style>
+  
+  <title>Barbershop Luiz Barber</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $(".cta-button").click(function() {
+        var dia = $("#dia").val();
+        var horario = $("#horario").val();
+        var mensagem = "Olá! Gostaria de agendar um horário para " + dia + " às " + horario + ". Aguardo confirmação. Obrigado!";
+        var numeroBarbeiro = "55(62)99433-3220";
+        var linkWhatsapp = "https://api.whatsapp.com/send?phone=+55(62)99433-3220" + "&text=" + encodeURIComponent(mensagem);
+        window.open(linkWhatsapp);
+      });
+    });
+  </script>
+  <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <img src="img/Luiz.barber.jpg" alt="logo" width="300" height="200">
+    <h1>BARBERSHOP LUIZ BARBER</h1>
+  </header>
+
+  <p></p> <!-- Espaço entre módulos -->
+  <!--Botoões-->
+
+  <nav>
+    <button><a href="#sobre">Sobre</a></button>
+    <button><a href="#servicos">Serviços</a></button>
+    <button><a href="#Ambiente">Ambiente</a></button>
+    <button><a href="#produtos">Produtos</a></button>
+    <button><a href="#feedback">Feedback</a></button>
+    <button><a href="#contato">Contato</a></button>
+    <button><a href="#localizacao">Localização</a></button>
+  </nav>
+
+   <!--sobre-->
+
+   <section id="sobre">
+    <h2 class="section-title">Sobre</h2>
+    <div class="about-content">
+      <p>Barbershop Luiz Barber é um salão de beleza especializado em cortes de cabelo e barba para homens. Gerenciado pelo cabeleleiro Luiz Cezar que está pront para fornecer a você um serviço excepcional.Ambiente agradavel com bastante interação, com diversas bebidas e produutos disponiveis para compra.</p>
+      <img src="img/luiz.cab.png" alt="Barbershop Luiz Cezar" width="300" height="200">
+    </div>
+    <button class="cta-button">Agende seu horário</button>
+  </section>
+
+  <p>
+
+  </p>
+
+  <!--Serviços-->
+
+  <section id="servicos">
+    <h2 class="section-title">Serviços</h2>
+    <ul class="service-list">
+      <li>
+        <span class="service-name">Corte de cabelo Social</span>
+        <span class="service-price">R$ 25,00</span>
+      </li>
+      <li>
+        <span class="service-name">Corte de cabelo degrade </span>
+        <span class="service-price">R$ 30,00</span>
+      <li>
+        <span class="service-name">Corte de cabelo degrade navalhado</span>
+        <span class="service-price">R$ 30,00</span>
+      </li>
+      <li>
+        <span class="service-name">Barba</span>
+        <span class="service-price">R$ 15,00</span>
+      </li>
+      <li>
+        <span class="service-name">Sobrancelha pinça</span>
+        <span class="service-price">R$ 10,00</span>
+      </li>
+      <li>
+        <span class="service-name">Sobrancelha navalha</span>
+        <span class="service-price">R$ 10,00</span>
+      </li>
+      <li>
+        <span class="service-name">Pigmentação</span>
+        <span class="service-price">R$ 10,00</span>
+      </li>
+      <li>
+        <span class="service-name">Freestyle</span>
+        <span class="service-price">R$ 10,00</span>
+      </li>
+    </ul>
+  </section>
+
+
+  
+    <!--ambiente-->
+
+    <section id="ambiente">
+      <h2 class="section-title"> Nosso Ambiente</h2>
+      <br></br>
+      <div class="photo-gallery">
+        <div class="photo-item">
+          <img src="img/luiz.barber2.jpg" alt="Ambiente 1">
+        </div>
+        <div class="photo-item">
+          <img src="img/luiz.barber3.jpg" alt="Ambiente 2">
+        </div>
+        <div class="photo-item">
+          <img src="img/luiz.barber4.jpg" alt="Ambiente 3">
+        </div>
+        <div class="photo-item">
+          <img src="img/luiz.barber5.jpg" alt="Ambiente 4">
+        </div>
+        <!-- Adicione mais divs .photo-item conforme necessário para mais fotos -->
+      </div>
+    </section>
+
+    <p>
+      <br>
+    </p>
+    
+  
+    <section id="horarios">
+      <h2>Horários de Funcionamento</h2>
+      <div class="table-container">
+        <table>
+          <tbody>
+            <tr>
+              <td class="day">Segunda-feira</td>
+              <td class="time">08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td class="day">Terça-feira</td>
+              <td class="time">08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td class="day">Quarta-feira</td>
+              <td class="time">08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td class="day">Quinta-feira</td>
+              <td class="time">08:00 - 18:00</td>
+            </tr>
+            <tr>
+              <td class="day">Sexta-feira</td>
+              <td class="time">08:00 - 20:00</td>
+            </tr>
+            <tr>
+              <td class="day">Sábado</td>
+              <td class="time">09:00 - 17:00</td>
+            </tr>
+            <tr>
+              <td class="day">Domingo</td>
+              <td class="time">Fechado</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    
+  <!--horários-->
+
+  <section id="horarios">
+    <h2>Horários Disponíveis</h2>
+    <form>
+      <label for="dia">Dia:</label>
+      <select id="dia">
+        <option value="Segunda-feira">Segunda-feira</option>
+        <option value="Terça-feira">Terça-feira</option>
+        <option value="Quarta-feira">Quarta-feira</option>
+        <option value="Quinta-feira">Quinta-feira</option>
+        <option value="Sexta-feira">Sexta-feira</option>
+        <option value="Sábado">Sábado</option>
+        <option value="Domingo">Domingo</option>
+      </select>
+      <br>
+      <label for="horario">Horário:</label>
+      <select id="horario">
+        <option value="08:00">08:00</option>
+        <option value="08:30">08:30</option>
+        <option value="09:00">09:00</option>
+        <option value="09:30">09:30</option>
+        <option value="10:00">10:00</option>
+        <option value="10:30">10:30</option>
+        <option value="11:00">11:00</option>
+        <option value="11:30">11:30</option>
+        <option value="14:00">14:00</option>
+        <option value="14:30">14:30</option>
+        <option value="15:00">15:00</option>
+        <option value="15:30">15:30</option>
+        <option value="16:00">16:00</option>
+        <option value="16:30">16:30</option>
+        <option value="17:00">17:00</option>
+        <option value=""></option>
+      </select>
+      <br>
+      <button type="button" class="cta-button">Agendar</button>
+    </form>
+  </section>
+  <p>
+    <br>
+  </p>
+  
+  
+
+  <!--produtos-->
+
+  <section id="produtos">
+    <h2>Produtos</h2>
+    <div class="product-item">
+      <img src="img/beard-brasil-pomada-para-cabelo.webp" alt="Pomada para cabelo" width="200" height="200">
+      <h3>Pomada para cabelo</h3>
+      <p>Descrição do Produto 1</p>
+      <span class="product-price">R$ 19,99</span>
+    </div>
+    <div class="product-item">
+      <img src="img/transferir.jpeg" alt="Minoxidil" width="200" height="200">
+      <h3>Produto 2</h3>
+      <p>Descrição do Produto 2</p>
+      <span class="product-price">R$ 29,99</span>
+    </div>
+  </section>
+  
+
+
+  <!--chave pix-->
+
+  <div class = 'div_pix' style="text-align: center;">
+    <h1>Compra com PIX</h1>
+    <button onclick="toggleQRCode()">Comprar</button>
+    <br><br>
+    <div id="qrcodeContainer"></div>
+  </div>
+  
+  <script>
+    var qrcodeDiv = document.getElementById("qrcodeContainer");
+    var qrcode = null;
+  
+    function gerarQRCode() {
+      var chavePix = "+5562994333220"; // Substitua por sua própria chave PIX
+  
+      qrcodeDiv.innerHTML = ""; // Limpa o conteúdo anterior, se houver
+  
+      qrcode = new QRCode(qrcodeDiv, {
+        text: chavePix,
+        width: 256,
+        height: 256,
+      });
+  
+      // Centralizar o QR Code
+      qrcodeDiv.style.display = "flex";
+      qrcodeDiv.style.justifyContent = "center";
+      qrcodeDiv.style.alignItems = "center";
+    }
+  
+    function toggleQRCode() {
+      if (qrcode) {
+        qrcodeDiv.innerHTML = ""; // Remove o elemento do QR Code do DOM
+        qrcode = null; // Define a variável como null para indicar que o QR Code não está mais presente
+      } else {
+        gerarQRCode(); // Gera o QR Code novamente
+      }
+    }
+  </script>
+  
+  
+  
+  
+  <!--feedback-->
+  <div id="feedback">
+    <h3>feedback</h3>
+    <form id="feedback-form">
+      <div class="form-group">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="rating">Avaliação:</label>
+        <div class="rating">
+          <input type="radio" id="star5" name="rating" value="5">
+          <label for="star5"></label>
+          <input type="radio" id="star4" name="rating" value="4">
+          <label for="star4"></label>
+          <input type="radio" id="star3" name="rating" value="3">
+          <label for="star3"></label>
+          <input type="radio" id="star2" name="rating" value="2">
+          <label for="star2"></label>
+          <input type="radio" id="star1" name="rating" value="1">
+          <label for="star1"></label>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message"></textarea>
+      </div>
+      <input type="submit" value="Enviar">
+    </form>
+    <div class="selected-rating">Avaliação selecionada: <span id="selected-rating-value">0</span></div>
+  
+    <script>
+      const ratingInputs = document.querySelectorAll('input[type="radio"][name="rating"]');
+      const selectedRatingValue = document.getElementById('selected-rating-value');
+  
+      ratingInputs.forEach((input) => {
+        input.addEventListener('change', (event) => {
+          const selectedValue = event.target.value;
+          selectedRatingValue.textContent = selectedValue;
+        });
+      });
+    </script>
+  </div>
+    
+  <p>
+    <br>
+  </p>
+
+  <!--localização-->
+
+  <section id="localizacao">
+    <h3>Localização do Estabelecimento</h1>
+    <div class="map-container">
+      <iframe
+        src="https://maps.google.com/?q=-16.277859,-48.955055"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <p>
+    <br>
+  </p>
+  
+   <!--contato-->
+
+   <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato conosco para agendar um horário ou tirar qualquer dúvida.</p>
+    <p>Telefone: (62) 99433-3220</p>
+    <p>Email: contato@barbershopluizcezar.com</p>
+  </section>
+
+<!--rodapé-->
+
+  <footer>
+    <p>© 2023 Barbershop Luiz Barber. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+
+</html>
+
+

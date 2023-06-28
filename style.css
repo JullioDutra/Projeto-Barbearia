@@ -1,0 +1,671 @@
+
+
+/* Estilos gerais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #2596be;
+  color: #333;
+  
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+/* Navegação */
+nav {
+  background-color: #ece8ff;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+
+nav a {
+  text-decoration: none;
+  color: hsl(0, 37%, 96%);
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #2596be;
+}
+
+nav a.active {
+  color: #fbf7f7;
+  font-weight: bold;
+}
+
+/* Estilize os botões como links */
+/* Reset de estilos */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo da navegação */
+.navbar {
+  background-color: #faf6f6;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item a {
+  display: block;
+  color: #2596be;
+  text-decoration: none;
+  padding: 10px 20px;
+  transition: background-color 0.3s;
+}
+
+.nav-item:hover > .dropdown-menu {
+  display: block;
+}
+
+.dropdown-toggle::after {
+  content: '\25BE';
+  margin-left: 5px;
+}
+
+.dropdown-menu {
+  position: absolute;
+  display: none;
+  background-color: #333;
+  padding: 10px;
+}
+
+.dropdown-menu li {
+  margin-bottom: 10px;
+}
+
+.dropdown-menu a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  transition: opacity 0.3s;
+}
+
+.dropdown-menu a:hover {
+  opacity: 0.7;
+}
+
+/* Seção principal */
+section {
+  padding: 20px;
+}
+
+/* Rodapé */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilos para o elemento principal */
+#servicos,
+#sobre {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Estilos para o título */
+#servicos .section-title,
+#sobre .section-title {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Estilos para a lista de serviços */
+#servicos .service-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#servicos .service-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#servicos .service-list li:last-child {
+  border-bottom: none;
+}
+
+/* Estilos para o nome do serviço */
+#servicos .service-name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilos para o preço do serviço */
+#servicos .service-price {
+  font-size: 18px;
+  color: #2596be;
+  margin-left: 10px;
+}
+
+/* Estilos para o conteúdo */
+#sobre .about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+#sobre .about-content p {
+  font-size: 16px;
+  line-height: 1.5;
+
+
+  text-align: center;
+}
+
+#sobre .about-content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Estilos para o botão de chamada para ação */
+#sobre .cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #2596be;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+#sobre .cta-button:hover {
+  background-color: #2596be;
+}
+
+
+section#horarios {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+section#horarios h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+button.cta-button {
+  width: 150px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #2596be;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.cta-button:hover {
+  background-color: #2596be;
+}
+
+
+
+/*parte 2*/
+
+/*parte 2*/
+
+#produtos {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.product-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.product-item {
+  display: inline-block;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-item:hover {
+  transform: translateY(-5px);
+}
+
+.product-item img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+
+.product-item h3 {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #333;
+}
+
+.product-item p {
+  margin-top: 5px;
+  color: #777;
+}
+
+.product-item .product-price {
+  display: block;
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e53935;
+}
+
+
+/* Função Legal */
+.product-item .funcao-legal {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff4f4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.product-item .funcao-legal:hover {
+  color: #555;
+}
+
+
+/*parte pix*/
+
+
+
+
+.container {
+  text-align: center;
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 24px;
+  color: #fbf8f8;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #ee7b00;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #2596be;
+}
+
+#qrcode {
+  margin-top: 20px;
+}
+
+
+/*parte 3*/
+
+#contato {
+  text-align: center;
+  padding: 50px;
+  background-color: #f7f7f7;
+}
+
+#contato h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#contato p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+#contato p:last-child {
+  margin-bottom: 0;
+}
+
+#contato p a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+#contato p a:hover {
+  text-decoration: underline;
+}
+
+/*parte 3*/
+
+#ambiente {
+  text-align: center;
+  padding: 50px;
+  background-color: #f2f2f2;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.photo-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.photo-item {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background-color: #fff;
+}
+
+.photo-item:hover {
+  transform: scale(1.05);
+}
+
+.photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .photo-item {
+    width: calc(50% - 20px);
+    height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-item {
+    width: calc(100% - 20px);
+  }
+}
+
+
+
+#localizacao {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%; /* Proporção ajustável para definir a altura do mapa */
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+#horarios {
+  text-align: center;
+  padding: 50px;
+  margin: 5px, 10px, 5px, 10px;
+}
+
+.table-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.day {
+  font-weight: bold;
+}
+
+.time {
+  color: #888;
+}
+
+@media (max-width: 480px) {
+  .table-container {
+    overflow-x: auto;
+  }
+}
+
+#feedback {
+  text-align: center;
+  padding: 50px;
+  background-color: #f4f4f4;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+#feedback-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f3f3;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #000;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  color: #ccc;
+  font-size: 30px;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: color 0.3s ease;
+}
+
+.rating label:before {
+  content: "\2605";
+}
+
+.rating input[type="radio"]:checked ~ label,
+.rating input[type="radio"]:hover ~ label {
+  color: #ffd700;
+}
+
+.selected-rating {
+  font-weight: bold;
+  color: #333;
+  margin-top: 10px;
+}
+
+#qrcode {
+  background-color: #007bff;
+  border: 1px solid #0056b3;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#qrcode:hover {
+  background-color: #0056b3;
+}
+
+#qrcodeContainer{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#conteudo {
+  display: none; /* Esconde o conteúdo inicialmente */
+}
+h3{
+  color: #000;
+}
